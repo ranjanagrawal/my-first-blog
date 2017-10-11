@@ -13,17 +13,16 @@ Ranjan's blog'
 <h1>Ranjan's blog</h1>
 </div>
 
-<div>
-<h2> first post</h2>
-<p>hi there !! </p>
-
-</div>
+{% for post in posts %}
 
 <div>
-<h2> Second Post</h2>
-<p> it works </p>
+    <p>published: {{post.published_date}}</p>
+    <h1>{{ post.title }}</h1>
+     <p> {{post.text|linebreaksbr }}</p>
 
 </div>
+{% endfor %}
+
 </body>
 
 </html>
